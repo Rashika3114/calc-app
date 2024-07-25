@@ -3,6 +3,21 @@ import "./App.css"
 
 const App = () => {
   const [value, setvalue] = useState("")
+  const squarefun = (e) => {
+    try {
+      const val = parseFloat(value)
+      if (!isNaN(val) && val >= 0) {
+        setvalue(Math.sqrt(value))
+      }
+      else {
+        setvalue("ERROR:Invalid Input")
+      }
+    }
+    catch (error) {
+      setvalue("ERROR")
+    }
+
+  }
   return (
     <div className='container'>
       <div className='calculator'>
@@ -37,6 +52,7 @@ const App = () => {
           <div>
             <input type='button' value="00" onClick={e => setvalue(value + e.target.value)} />
             <input type='button' value="0" onClick={e => setvalue(value + e.target.value)} />
+            <input type='button' value="√" onClick={squarefun} />
             <input type='button' value="=" className='equal' onClick={e => setvalue(eval(value))} />
 
           </div>

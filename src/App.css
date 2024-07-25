@@ -8,10 +8,15 @@
 
 }
 
+.container h1 {
+  text-align: center;
+}
+
 .calculator {
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   background-color: white;
+
 }
 
 form input {
@@ -48,5 +53,5 @@ form .display input {
 }
 
 form input.equal {
-  width: 123px;
+  width: 60px;
 }
